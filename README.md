@@ -20,7 +20,7 @@ Type `rr:` (short for remix.run) in a `.ts` or `.tsx` file to see corresponding 
 |----------------|-----------------------------------------|
 |`rr:imp`        |Import common helpers, hooks & components|
 |`rr:imp:types`  |Import Remix provided type definitions   |
-|`rr:imp:util`   |Import a util from `~/utils/`            |
+|`rr:imp:util`   |Import a module from `~/utils`            |
 
 
 ### Types
