@@ -1,0 +1,171 @@
+{
+	"Define route action": {
+		"prefix": "rr:action",
+		"body": [
+			"export const action: ActionFunction = async ({ request }) => {",
+			"  const formData = await request.formData()",
+			"  $1",
+			"}"
+		]
+	},
+	"Define file upload action": {
+		"prefix": "rr:action:file",
+		"body": [
+			"export const action: ActionFunction = async ({ request }) => {",
+			"  const formData = await parseMultipartFormData(",
+			"    request,",
+			"    uploadHandler",
+			"  )",
+			"  const file = formData.get('${1:fileFieldValue}')",
+			"  $2",
+			"}"
+		]
+	},
+	"Redirect from action": {
+		"prefix": "rr:action:redirect",
+		"body": [
+			"return redirect(${1:path})"
+		]
+	},
+	"Redirect with options from action": {
+		"prefix": "rr:action:redirect:o",
+		"body": [
+			"return redirect(${1:path}, {",
+			"  status: ${2:30x}",
+			"  headers: {",
+			"    '${3:Set-Cookie}': ${4:await commitSession(session)}",
+			"  },",
+			"})"
+		],
+		"description": "Redirect from the route's action with custom 30x status (other than the default 302) and headers."
+	},
+	"Define route component": {
+		"prefix": "rr:component",
+		"body": [
+			"export default function ${1:ComponentName}() {",
+			"  return (",
+			"    $2",
+			"  )",
+			"}"
+		],
+		"description": "The default export which is the component the route renders."
+	},
+	"Define route headers": {
+		"prefix": "rr:headers",
+		"body": [
+			"export function headers({ loaderHeaders, parentHeaders }) {",
+			"  return {",
+			"    '${1:Cache-Control}': '${2:max-age=300, s-maxage=3600}',",
+			"    $3",
+			"  }",
+			"}",
+			"$4"
+		]
+	},
+	"Hook - useLoaderData": {
+		"prefix": "rr:use:loader",
+		"body": [
+			"const loaderData = useLoaderData<LoaderData>()",
+			"$1"
+		]
+	},
+	"Hook - useLoaderData (destructured)": {
+		"prefix": "rr:use:d:loader",
+		"body": [
+			"const { ${1:data} } = useLoaderData<LoaderData>()",
+			"$2"
+		]
+	},
+	"Hook - useActionData": {
+		"prefix": "ruse:use:action",
+		"body": [
+			"const actionData = useActionData<ActionData>()",
+			"$1"
+		]
+	},
+	"Hook - useActionData (destructured)": {
+		"prefix": "rr:use:d:action",
+		"body": [
+			"const { ${1:data} } = useActionData<ActionData>()",
+			"$2"
+		]
+	},
+	"Import common": {
+		"prefix": "rr:imp:common",
+		"body": [
+			"import {",
+			"  Link,",
+			"  Form,",
+			"  useLoaderData,",
+			"  useActionData,",
+			"  json,",
+			"  redirect,",
+			"} from 'remix'",
+			"$1"
+		],
+		"description": "Import common Remix helpers, components and hooks"
+	},
+	"Import util": {
+		"prefix": "rr:imp:util",
+		"body": [
+			"import { ${2:name} } from '~/utils/${1:module}'",
+			"$3"
+		],
+		"description": "Import a util"
+	},
+	"Import server util": {
+		"prefix": "rr:imp:util:server",
+		"body": [
+			"import { ${2:name} } from '~/utils/${1:module}.server'",
+			"$3"
+		],
+		"description": "Import a server util"
+	},
+	"Define route loader": {
+		"prefix": "rr:loader",
+		"body": [
+			"export const loader: LoaderFunction = async ({ params, request }) => {",
+			"  $1",
+			"}"
+		]
+	},
+	"Return JSON from loader": {
+		"prefix": "rr:loader:json",
+		"body": [
+			"return json($1, {",
+			"  status: $2,",
+			"  headers: $3,",
+			"})"
+		],
+		"description": "return JSON with status and/or headers from the route's loader"
+	},
+	"Import common types": {
+		"prefix": "rr:imp:types",
+		"body": [
+			"import type {",
+			"  ActionFunction,",
+			"  LoaderFunction,",
+			"} from 'remix'",
+			"$1"
+		],
+		"description": "Import type definitions of conentional functions."
+	},
+	"Define LoaderData type": {
+		"prefix": "rr:type:LoaderData",
+		"body": [
+			"type LoaderData = {",
+			"  $1",
+			"}"
+		],
+		"description": "Type the data to be read by the loader."
+	},
+	"Define ActionData type": {
+		"prefix": "rr:type:ActionData",
+		"body": [
+			"type ActionData = {",
+			"  $1",
+			"}"
+		],
+		"description": "Type the data to be written by the action."
+	}
+}
