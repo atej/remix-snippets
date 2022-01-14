@@ -16,10 +16,10 @@ Type `rr:` (short for remix.run) in a `.ts` or `.tsx` file to see corresponding 
 
 #### Namespace: `rr:imp`
 
-|Prefix          |Description                              |
-|----------------|-----------------------------------------|
-|`rr:imp`        |Import common helpers, hooks & components|
-|`rr:imp:types`  |Import Remix provided type definitions   |
+|Prefix          |Description                               |
+|----------------|------------------------------------------|
+|`rr:imp`        |Import common helpers, hooks & components |
+|`rr:imp:types`  |Import Remix provided type definitions    |
 |`rr:imp:util`   |Import a module from `~/utils`            |
 
 
