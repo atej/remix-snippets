@@ -17,7 +17,7 @@
       "  headers: $3,",
       "})"
     ],
-    "description": "return JSON with status and/or headers from the route's loader",
+    "description": "Use the json helper to return JSON with status and/or headers from the route's loader",
     "scope": "typescriptreact"
   }
 }

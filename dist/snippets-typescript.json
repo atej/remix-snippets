@@ -1,11 +1,11 @@
 {
-	"Remix - Create a cookie": {
+	"Create a cookie": {
 		"prefix": "rr:cookie:create",
 		"body": [
 			"import { createCookie } from 'remix';",
 			"",
-			"const cookie = createCookie('cookie-name', {",
-			"  domain: '${1:example.com}',",
+			"const ${1:cookieId} = createCookie('${2:cookie-id}', {",
+			"  domain: '${3:example.com}',",
 			"  expires: new Date(Date.now() + 60),",
 			"  httpOnly: true,",
 			"  maxAge: 60,",

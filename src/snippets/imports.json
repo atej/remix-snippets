@@ -25,7 +25,7 @@
       "} from 'remix'",
       "$1"
     ],
-    "description": "Import type definitions of conentional functions.",
+    "description": "Import type definitions of conventional functions.",
     "scope": "typescriptreact"
   },
 

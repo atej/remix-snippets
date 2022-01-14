@@ -63,28 +63,28 @@
 		]
 	},
 	"Hook - useLoaderData": {
-		"prefix": "rr:use:loader",
+		"prefix": "rr:use:loaderdata",
 		"body": [
-			"const loaderData = useLoaderData<LoaderData>()",
-			"$1"
+			"const ${1:loaderData} = useLoaderData<LoaderData>()",
+			"$2"
 		]
 	},
 	"Hook - useLoaderData (destructured)": {
-		"prefix": "rr:use:d:loader",
+		"prefix": "rr:use:d:loaderdata",
 		"body": [
 			"const { ${1:data} } = useLoaderData<LoaderData>()",
 			"$2"
 		]
 	},
 	"Hook - useActionData": {
-		"prefix": "ruse:use:action",
+		"prefix": "ruse:use:actiondata",
 		"body": [
-			"const actionData = useActionData<ActionData>()",
-			"$1"
+			"const ${1:actionData} = useActionData<ActionData>()",
+			"$2"
 		]
 	},
 	"Hook - useActionData (destructured)": {
-		"prefix": "rr:use:d:action",
+		"prefix": "rr:use:d:actiondata",
 		"body": [
 			"const { ${1:data} } = useActionData<ActionData>()",
 			"$2"
@@ -114,7 +114,7 @@
 			"} from 'remix'",
 			"$1"
 		],
-		"description": "Import type definitions of conentional functions."
+		"description": "Import type definitions of conventional functions."
 	},
 	"Import util": {
 		"prefix": "rr:imp:util",
@@ -148,7 +148,7 @@
 			"  headers: $3,",
 			"})"
 		],
-		"description": "return JSON with status and/or headers from the route's loader"
+		"description": "Use the json helper to return JSON with status and/or headers from the route's loader"
 	},
 	"Define LoaderData type": {
 		"prefix": "rr:type:LoaderData",
