@@ -1,9 +1,9 @@
 {
-  "name": "snippet-sample",
-  "displayName": "Snippet Sample",
-  "description": "Snippet Sample",
+  "name": "remix-snippets",
+  "displayName": "Remix Snippets",
+  "description": "Code snippets for the Remix web framework.",
   "version": "0.0.1",
-  "publisher": "vscode-samples",
+  "publisher": "atej",
   "engines": {
     "vscode": "^1.28.0"
   },
@@ -13,12 +13,27 @@
   "contributes": {
     "snippets": [
       {
-        "language": "javascript",
-        "path": "./snippets.json"
+        "language": "typescript",
+        "path": "./dist/snippets-typescript.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./dist/snippets-typescriptreact.json"
       }
     ]
   },
   "scripts": {
-    "format": "npx prettier . --write"
+    "format": "prettier --write .",
+    "clean": "rimraf ./dist/**/* && echo All clean ✨",
+    "gulp:dev": "gulp dev",
+    "gulp:build": "gulp build",
+    "dev": "npm run --silent gulp:dev",
+    "build": "npm run --silent clean && npm run --silent gulp:build"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-merge-json": "^2.1.1",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2"
   }
 }
