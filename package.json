@@ -3,7 +3,7 @@
   "displayName": "Remix Snippets",
   "description": "Code snippets for the Remix web framework.",
   "version": "0.1.0",
-  "publisher": "atej",
+  "publisher": "aseemtaneja",
   "engines": {
     "vscode": "^1.28.0"
   },
