@@ -1,0 +1,38 @@
+{
+  "Import common": {
+    "prefix": "rr:imp:common",
+    "body": [
+      "import {",
+      "  Link,",
+      "  Form,",
+      "  useLoaderData,",
+      "  useActionData,",
+      "  json,",
+      "  redirect,",
+      "} from 'remix'",
+      "$1"
+    ],
+    "description": "Import common Remix helpers, components and hooks",
+    "scope": "typescriptreact"
+  },
+
+  "Import util": {
+    "prefix": "rr:imp:util",
+    "body": [
+      "import { ${2:name} } from '~/utils/${1:module}'",
+      "$3"
+    ],
+    "description": "Import a util",
+    "scope": "typescriptreact"
+  },
+
+  "Import server util": {
+    "prefix": "rr:imp:util:server",
+    "body": [
+      "import { ${2:name} } from '~/utils/${1:module}.server'",
+      "$3"
+    ],
+    "description": "Import a server util",
+    "scope": "typescriptreact"
+  }
+}

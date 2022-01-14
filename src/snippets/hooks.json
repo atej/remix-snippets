@@ -1,0 +1,37 @@
+{
+  "Hook - useLoaderData": {
+    "prefix": "rr:use:loader",
+    "body": [
+      "const loaderData = useLoaderData<LoaderData>()",
+      "$1"
+    ],
+    "scope": "typescriptreact"
+  },
+
+  "Hook - useLoaderData (destructured)": {
+    "prefix": "rr:use:d:loader",
+    "body": [
+      "const { ${1:data} } = useLoaderData<LoaderData>()",
+      "$2"
+    ],
+    "scope": "typescriptreact"
+  },
+
+  "Hook - useActionData": {
+    "prefix": "ruse:use:action",
+    "body": [
+      "const actionData = useActionData<ActionData>()",
+      "$1"
+    ],
+    "scope": "typescriptreact"
+  },
+
+  "Hook - useActionData (destructured)": {
+    "prefix": "rr:use:d:action",
+    "body": [
+      "const { ${1:data} } = useActionData<ActionData>()",
+      "$2"
+    ],
+    "scope": "typescriptreact"
+  }
+}

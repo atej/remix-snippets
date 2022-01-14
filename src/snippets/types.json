@@ -1,0 +1,36 @@
+{
+  "Import common types": {
+    "prefix": "rr:imp:types",
+    "body": [
+      "import type {",
+      "  ActionFunction,",
+      "  LoaderFunction,",
+      "} from 'remix'",
+      "$1"
+    ],
+    "description": "Import type definitions of conentional functions.",
+    "scope": "typescriptreact"
+  },
+
+  "Define LoaderData type": {
+    "prefix": "rr:type:LoaderData",
+    "body": [
+      "type LoaderData = {",
+      "  $1",
+      "}"
+    ],
+    "description": "Type the data to be read by the loader.",
+    "scope": "typescriptreact"
+  },
+
+  "Define ActionData type": {
+    "prefix": "rr:type:ActionData",
+    "body": [
+      "type ActionData = {",
+      "  $1",
+      "}"
+    ],
+    "description": "Type the data to be written by the action.",
+    "scope": "typescriptreact"
+  }
+}

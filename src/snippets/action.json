@@ -1,0 +1,49 @@
+{
+  "Define route action": {
+    "prefix": "rr:action",
+    "body": [
+      "export const action: ActionFunction = async ({ request }) => {",
+      "  const formData = await request.formData()",
+      "  $1",
+      "}"
+    ],
+    "scope": "typescriptreact"
+  },
+
+  "Define file upload action": {
+    "prefix": "rr:action:file",
+    "body": [
+      "export const action: ActionFunction = async ({ request }) => {",
+      "  const formData = await parseMultipartFormData(",
+      "    request,",
+      "    uploadHandler",
+      "  )",
+      "  const file = formData.get('${1:fileFieldValue}')",
+      "  $2",
+      "}"
+    ],
+    "scope": "typescriptreact"
+  },
+
+  "Redirect from action": {
+    "prefix": "rr:action:redirect",
+    "body": [
+      "return redirect(${1:path})"
+    ],
+    "scope": "typescriptreact"
+  },
+
+  "Redirect with options from action": {
+    "prefix": "rr:action:redirect:o",
+    "body": [
+      "return redirect(${1:path}, {",
+      "  status: ${2:30x}",
+      "  headers: {",
+      "    '${3:Set-Cookie}': ${4:await commitSession(session)}",
+      "  },",
+      "})"
+    ],
+    "description": "Redirect from the route's action with custom 30x status (other than the default 302) and headers.",
+    "scope": "typescriptreact"
+  }
+}

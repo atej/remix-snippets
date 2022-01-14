@@ -1,0 +1,15 @@
+{
+  "Define route headers": {
+    "prefix": "rr:headers",
+    "body": [
+      "export function headers({ loaderHeaders, parentHeaders }) {",
+      "  return {",
+      "    '${1:Cache-Control}': '${2:max-age=300, s-maxage=3600}',",
+      "    $3",
+      "  }",
+      "}",
+      "$4"
+    ],
+    "scope": "typescriptreact"
+  }
+}
