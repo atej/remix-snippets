@@ -46,7 +46,8 @@
     "gulp:dev": "gulp dev",
     "gulp:build": "gulp build",
     "dev": "npm run --silent gulp:dev",
-    "build": "npm run --silent clean && npm run --silent gulp:build"
+    "build": "npm run --silent clean && npm run --silent gulp:build",
+    "vscode:prepublish": "npm run build"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
