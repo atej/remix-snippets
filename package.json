@@ -2,11 +2,29 @@
   "name": "remix-snippets",
   "displayName": "Remix Snippets",
   "description": "Code snippets for the Remix web framework.",
+  "icon": "assets/icon.png",
   "version": "0.1.0",
   "publisher": "aseemtaneja",
   "engines": {
     "vscode": "^1.28.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atej/remix-snippets.git"
+  },
+  "keywords": [
+    "remix",
+    "remix.run",
+    "vscode",
+    "snippets",
+    "code snippets"
+  ],
+  "author": "Aseem Taneja <taneja.aseem@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atej/remix-snippets/issues"
+  },
+  "homepage": "https://github.com/atej/remix-snippets#readme",
   "categories": [
     "Snippets"
   ],
