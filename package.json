@@ -17,5 +17,8 @@
         "path": "./snippets.json"
       }
     ]
+  },
+  "scripts": {
+    "format": "npx prettier . --write"
   }
 }
