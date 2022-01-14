@@ -105,6 +105,17 @@
 		],
 		"description": "Import common Remix helpers, components and hooks"
 	},
+	"Import common types": {
+		"prefix": "rr:imp:types",
+		"body": [
+			"import type {",
+			"  ActionFunction,",
+			"  LoaderFunction,",
+			"} from 'remix'",
+			"$1"
+		],
+		"description": "Import type definitions of conentional functions."
+	},
 	"Import util": {
 		"prefix": "rr:imp:util",
 		"body": [
@@ -138,17 +149,6 @@
 			"})"
 		],
 		"description": "return JSON with status and/or headers from the route's loader"
-	},
-	"Import common types": {
-		"prefix": "rr:imp:types",
-		"body": [
-			"import type {",
-			"  ActionFunction,",
-			"  LoaderFunction,",
-			"} from 'remix'",
-			"$1"
-		],
-		"description": "Import type definitions of conentional functions."
 	},
 	"Define LoaderData type": {
 		"prefix": "rr:type:LoaderData",

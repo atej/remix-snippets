@@ -16,6 +16,19 @@
     "scope": "typescriptreact"
   },
 
+  "Import common types": {
+    "prefix": "rr:imp:types",
+    "body": [
+      "import type {",
+      "  ActionFunction,",
+      "  LoaderFunction,",
+      "} from 'remix'",
+      "$1"
+    ],
+    "description": "Import type definitions of conentional functions.",
+    "scope": "typescriptreact"
+  },
+
   "Import util": {
     "prefix": "rr:imp:util",
     "body": [
